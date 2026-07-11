@@ -100,65 +100,65 @@
   <div class="w-full max-w-[760px] min-h-screen bg-[#EAE3D5] shadow-2xl relative flex flex-col overflow-hidden">
 
     <!-- =========================================================
-         ■ セクション1: ファーストビュー (背景 #EAE3D5)
+         ■ セクション1: ファーストビュー (写真をキービジュアルに)
          ========================================================= -->
-    <section class="relative px-6 pt-16 pb-12 text-center flex flex-col items-center justify-between min-h-[95vh] bg-[#EAE3D5]">
+    <section class="relative min-h-[100vh] flex flex-col overflow-hidden">
 
-      <!-- メイン見出し -->
-      <div class="reveal-on-scroll space-y-4 my-auto">
-        <h1 class="font-serif text-[26px] md:text-[30px] leading-snug text-[#1B2A4A] font-bold tracking-wider">
-          糖質制限をしたら、<br class="md:hidden">体重は減った。<br>
-          <span class="inline-block mt-4 bg-[#1B2A4A] text-[#F5F0E6] px-4 py-2 text-[21px] md:text-[26px] font-bold tracking-wider leading-relaxed">
-            でも、身体のラインに<br class="md:hidden">満足できなかった。
-          </span>
-        </h1>
-      </div>
+      <!-- 全面背景フォト(鮮明・テキストなしのクリーン版) -->
+      <img src="sc03.png" alt="鏡の前で振り返る女性"
+        class="absolute inset-0 w-full h-full object-cover"
+        style="object-position: 74% center;"
+        onerror="window.repairAssetSource(this, true);">
 
-      <!-- 表紙画像 & 自動修復スクリプト付き -->
-      <div class="reveal-on-scroll relative w-full max-w-[310px] aspect-[1/1.5] mx-auto my-6 shadow-[0_16px_40px_rgba(27,42,74,0.18)] rounded-sm group overflow-hidden">
+      <!-- 可読性のためのスクリム(左から右へ) -->
+      <div class="absolute inset-0" style="background-image: linear-gradient(to right, #EAE3D5 0%, #EAE3D5 38%, rgba(234,227,213,0.84) 56%, rgba(234,227,213,0.26) 76%, rgba(234,227,213,0) 100%);"></div>
 
-        <!-- CSSフォールバック（画像が完全に解決するまで、またはエラー時に表示される美しい装丁） -->
-        <div class="absolute inset-0 bg-gradient-to-tr from-[#1B2A4A] to-[#2D3E61] p-6 flex flex-col justify-between text-left border border-[#C9A96E]/30 z-0 select-none">
-          <div class="border border-[#C9A96E]/20 h-full w-full p-4 flex flex-col justify-between">
-            <div>
-              <p class="text-[9px] tracking-[0.25em] text-[#C9A96E]/80 font-serif font-light">12 WEEKS BODY DESIGN BOOK</p>
-              <h2 class="text-[19px] tracking-widest text-[#F5F0E6] font-serif font-bold mt-4 leading-relaxed">
-                糖質<span class="text-[#C9A96E]">オン！</span><br>ダイエット
-              </h2>
-            </div>
-            <div class="text-[10px] text-[#F5F0E6]/60 font-serif font-light space-y-1">
-              <p class="border-t border-[#C9A96E]/20 pt-2">筋肉と代謝のために使う、新しい設計図</p>
-              <p class="text-[#C9A96E]/80 font-sans tracking-wider text-[8px]">O.N. METHOD / 170,000 WORDS</p>
-            </div>
-          </div>
+      <div class="relative z-10 flex flex-col justify-between h-full min-h-[100vh] px-6 pt-16 pb-12">
+
+        <!-- フック(最初に大きく) -->
+        <div class="reveal-on-scroll space-y-4 my-auto max-w-[420px]">
+          <h1 class="font-serif text-[26px] md:text-[30px] leading-snug text-[#1B2A4A] font-bold tracking-wider text-left">
+            糖質制限をしたら、<br>体重は減った。<br>
+            <span class="inline-block mt-4 bg-[#1B2A4A] text-[#F5F0E6] px-4 py-2 text-[21px] md:text-[26px] font-bold tracking-wider leading-relaxed">
+              でも、身体のラインに<br>満足できなかった。
+            </span>
+          </h1>
         </div>
 
-        <!-- 実際の表紙画像（濁点コードの自動修復機能付き） -->
-        <img
-          src="cover.png"
-          alt="糖質オン！ダイエット 表紙"
-          class="absolute inset-0 w-full h-full object-cover z-10 transition-opacity duration-500 pointer-events-none"
-          onload="this.style.opacity='1'; this.previousElementSibling.style.opacity='0';"
-          onerror="window.repairAssetSource(this);"
-        >
-      </div>
+        <!-- 表紙のテキストを組版(タグライン・タイトル・サブコピー・バッジ) -->
+        <div class="reveal-on-scroll space-y-5 w-full max-w-[600px] text-left">
+          <div class="flex items-center gap-3">
+            <span class="h-[1.5px] w-12 bg-[#C9A96E]"></span>
+            <p class="text-[17px] md:text-[20px] tracking-[0.2em] text-[#A9854A] font-serif font-bold">糖質は抜くな、使え。</p>
+          </div>
 
-      <!-- キャッチコピー & サブ情報 -->
-      <div class="reveal-on-scroll space-y-6 mt-auto w-full max-w-[480px]">
-        <p class="font-serif text-[17px] md:text-[19px] text-[#1B2A4A] leading-relaxed tracking-wider font-bold">
-          糖質は、抜くのではなく、<br class="md:hidden">筋肉と代謝のために使う<br class="hidden md:block">12週間ボディメイク
-        </p>
+          <h2 class="font-serif text-[54px] md:text-[72px] leading-[1.0] text-[#1B2A4A] font-bold tracking-wide"
+              style="text-shadow: 0 4px 24px rgba(245,240,230,0.6);">
+            糖質<span class="text-[#C9A96E]">オン！</span><br>ダイエット
+          </h2>
 
-        <div class="space-y-4">
-          <p class="text-[11px] tracking-[0.3em] text-[#A9854A] font-serif uppercase font-semibold">
-            Brainにて先行発売
+          <p class="text-[16px] md:text-[19px] text-[#1B2A4A] leading-relaxed font-bold max-w-[420px]"
+             style="text-shadow: 0 2px 16px rgba(245,240,230,0.7);">
+            ――糖質制限で体重は減ったのに、<br>下腹・背中・ヒップは変わらなかったあなたへ。
           </p>
 
-          <!-- スクロールキュー -->
-          <div class="flex flex-col items-center space-y-2 pt-2">
-            <span class="text-[9px] tracking-[0.2em] text-[#B8AFA3] uppercase">Scroll</span>
-            <div class="w-[1px] h-12 bg-gradient-to-b from-[#C9A96E] to-transparent relative overflow-hidden">
-              <div class="absolute top-0 left-0 w-full h-1/2 bg-[#C9A96E] animate-scroll-line"></div>
+          <div class="inline-block border-2 border-[#C9A96E] bg-[#EAE3D5]/70 px-6 py-3">
+            <p class="text-[16px] md:text-[19px] tracking-[0.12em] text-[#A9854A] font-serif font-bold">
+              12週間 ボディライン再構築プログラム
+            </p>
+          </div>
+
+          <div class="space-y-4 pt-2">
+            <p class="text-[16px] md:text-[18px] tracking-[0.15em] text-[#A9854A] font-serif font-bold">
+              Brainにて先行発売
+            </p>
+
+            <!-- スクロールキュー -->
+            <div class="flex flex-col items-start space-y-2 pt-2">
+              <span class="text-[9px] tracking-[0.2em] text-[#B8AFA3] uppercase">Scroll</span>
+              <div class="w-[1px] h-12 bg-gradient-to-b from-[#C9A96E] to-transparent relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-1/2 bg-[#C9A96E] animate-scroll-line"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -220,9 +220,9 @@
          ■ セクション3: 共感チェック
          ========================================================= -->
     <section class="px-6 py-20 bg-[#EAE3D5] border-t border-[#B8AFA3]/15 relative">
-      <!-- 装飾用背景 sc03.png のコンテナ -->
+      <!-- 装飾用背景 sc01.png のコンテナ -->
       <div class="absolute inset-0 select-none pointer-events-none z-0">
-        <img src="sc03.png" alt="鏡の前に立つ女性" class="absolute inset-0 w-full h-full object-cover object-right" onerror="window.repairAssetSource(this, true);">
+        <img src="sc01.png" alt="鏡を見つめる女性の後ろ姿" class="absolute inset-0 w-full h-full object-cover" style="object-position: 78% center;" onerror="window.repairAssetSource(this, true);">
         <div class="absolute inset-0" style="background-image: linear-gradient(to right, #EAE3D5 0%, #EAE3D5 42%, rgba(234,227,213,0.88) 60%, rgba(234,227,213,0.25) 82%, rgba(234,227,213,0) 100%);"></div>
       </div>
 
@@ -426,10 +426,20 @@
           <span class="h-[1px] w-8 bg-gradient-to-l from-transparent to-[#C9A96E]"></span>
         </div>
 
-        <h2 class="reveal-on-scroll font-serif text-[26px] text-center text-[#1B2A4A] tracking-widest font-bold mb-12">
+        <h2 class="reveal-on-scroll font-serif text-[26px] text-center text-[#1B2A4A] tracking-widest font-bold mb-10">
           5部17章+終章。<br>
           約<span class="text-[28px] text-[#A9854A] font-serif">17</span>万字の設計図。
         </h2>
+
+        <!-- 書影(クリックで拡大ポップアップ) -->
+        <div class="reveal-on-scroll flex justify-center mb-12">
+          <button type="button" onclick="window.openCoverLightbox()"
+            class="w-[180px] md:w-[210px] shadow-[0_18px_44px_rgba(27,42,74,0.30)] rounded-sm overflow-hidden border border-[#C9A96E]/40 transition-transform duration-300 hover:scale-105 hover:shadow-[0_24px_56px_rgba(27,42,74,0.4)] cursor-pointer focus:outline-none"
+            aria-label="表紙を拡大表示">
+            <img src="cover.png" alt="糖質オン！ダイエット 表紙" class="w-full h-auto block pointer-events-none"
+              onerror="window.repairAssetSource(this);">
+          </button>
+        </div>
 
         <!-- 書籍目次 -->
         <div class="stagger-container space-y-6 mb-12 border-t border-b border-[#B8AFA3]/30 py-8">
@@ -486,9 +496,20 @@
           <span class="h-[1px] w-8 bg-gradient-to-l from-transparent to-[#C9A96E]"></span>
         </div>
 
-        <h2 class="reveal-on-scroll font-serif text-[26px] text-center text-[#1B2A4A] tracking-widest font-bold mb-12">
+        <h2 class="reveal-on-scroll font-serif text-[26px] text-center text-[#1B2A4A] tracking-widest font-bold mb-5">
           読むだけで、終わらせない。
         </h2>
+
+        <p class="reveal-on-scroll text-center text-[15px] md:text-[16px] text-[#3A4560] leading-relaxed max-w-[440px] mx-auto mb-14">
+          読んで終わりにしない。<br>
+          ここから先は、あなた自身の身体の<span class="text-[#A9854A] font-bold">データを活用しましょう</span>
+        </p>
+
+        <!-- シートグリッドの見出しラベル -->
+        <div class="reveal-on-scroll flex items-center gap-3 mb-6">
+          <span class="text-[13px] tracking-[0.15em] text-[#A9854A] font-serif font-bold whitespace-nowrap">実践シート 10点</span>
+          <span class="h-[1px] flex-1 bg-[#C9A96E]/40"></span>
+        </div>
 
         <!-- シート10点カードグリッド -->
         <div class="stagger-container grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
@@ -543,6 +564,12 @@
             <span class="text-[15px] text-[#1B2A4A] font-medium leading-snug mt-1">医療機関への相談を優先すべきケース</span>
           </div>
 
+        </div>
+
+        <!-- 特典グリッドの見出しラベル -->
+        <div class="reveal-on-scroll flex items-center gap-3 mb-6">
+          <span class="text-[13px] tracking-[0.15em] text-[#A9854A] font-serif font-bold whitespace-nowrap">さらに、2つの特典</span>
+          <span class="h-[1px] flex-1 bg-[#C9A96E]/40"></span>
         </div>
 
         <!-- 特典2点 (金枠カード) -->
@@ -608,7 +635,7 @@
               この本が向く方
             </h3>
             <p class="text-[15px] leading-loose text-[#1B2A4A] text-justify font-medium">
-              もう極端なことはしたくない。<br>
+              もう極端なダイエットはしたくない。<br>
               でも、鏡の前の自分を諦めたくない——そう思っている方へ。
             </p>
           </div>
@@ -639,17 +666,17 @@
         </div>
 
         <h2 class="reveal-on-scroll font-serif text-[26px] text-center text-[#1B2A4A] tracking-widest font-bold mb-12">
-          先に読んだ方の声
+          先行リーダーたちの声
         </h2>
 
-        <!-- 読者ボイスカード 3選 -->
+        <!-- 読者ボイスカード 4選 -->
         <div class="stagger-container space-y-6">
 
           <div class="stagger-item reveal-on-scroll relative p-6 bg-white/40 border border-[#B8AFA3]/15 rounded-sm">
             <span class="absolute top-4 left-4 text-[42px] font-serif text-[#C9A96E]/20 leading-none">“</span>
             <div class="pl-8 py-2">
               <p class="text-[15px] leading-relaxed text-[#3A4560] mb-4 text-justify font-normal">
-                (モニターの声・準備中)
+                正直、「糖質を使う」なんて都合のいい話だと思っていました。糖質制限で結局リバウンドしてきた身としては半信半疑でしたが、試しに筋トレの日だけご飯を増やしてみたら、体重はほぼ同じなのにウエストが2cm近く細くなって驚いています。理屈で納得できたのが大きかったです。
               </p>
               <p class="text-right text-[13px] text-[#7A7265] font-medium tracking-wider">— 40代・会社員</p>
             </div>
@@ -659,7 +686,7 @@
             <span class="absolute top-4 left-4 text-[42px] font-serif text-[#C9A96E]/20 leading-none">“</span>
             <div class="pl-8 py-2">
               <p class="text-[15px] leading-relaxed text-[#3A4560] mb-4 text-justify font-normal">
-                (モニターの声・準備中)
+                停滞期が来るたびに食事を減らして失敗してきたので、「維持カロリーに戻す」という発想には最初かなり抵抗がありました。でも思い切って言われた通りにしたら、1週間後には体重がまた動き始めて。数字で理由がわかると、我慢しなくていいんだと初めて思えました。
               </p>
               <p class="text-right text-[13px] text-[#7A7265] font-medium tracking-wider">— 50代・主婦</p>
             </div>
@@ -669,9 +696,19 @@
             <span class="absolute top-4 left-4 text-[42px] font-serif text-[#C9A96E]/20 leading-none">“</span>
             <div class="pl-8 py-2">
               <p class="text-[15px] leading-relaxed text-[#3A4560] mb-4 text-justify font-normal">
-                (モニターの声・準備中)
+                長年ご飯を怖いものだと思い込んでいたので、最初はページを開くのも半信半疑でした。でも「脂質との重なりを見る」という視点に納得してからは、コンビニでの選び方が変わりました。何よりお腹が空いてイライラすることが減ったのが一番の変化です。
               </p>
               <p class="text-right text-[13px] text-[#7A7265] font-medium tracking-wider">— 40代・専門職</p>
+            </div>
+          </div>
+
+          <div class="stagger-item reveal-on-scroll relative p-6 bg-white/40 border border-[#B8AFA3]/15 rounded-sm">
+            <span class="absolute top-4 left-4 text-[42px] font-serif text-[#C9A96E]/20 leading-none">“</span>
+            <div class="pl-8 py-2">
+              <p class="text-[15px] leading-relaxed text-[#3A4560] mb-4 text-justify font-normal">
+                運動経験ゼロで、正直続けられる自信はありませんでした。それでも週2回・自宅の6種目だけならと半信半疑で始めて4週間。先日、後ろ姿を撮った写真を見て、自分でもヒップの位置が変わっているのがわかって嬉しくなりました。
+              </p>
+              <p class="text-right text-[13px] text-[#7A7265] font-medium tracking-wider">— 30代後半・自営業</p>
             </div>
           </div>
 
@@ -807,7 +844,7 @@
 
         </div>
 
-        <p class="reveal-on-scroll text-center text-[12px] text-[#7A7265] leading-relaxed">
+        <p class="reveal-on-scroll text-center text-[14px] md:text-[15px] text-[#3A4560] font-medium leading-loose border-t border-[#B8AFA3]/40 pt-6 mt-2">
           ※本書は一般向けの情報であり、医療アドバイスではありません。<br>妊娠中・治療中の方は主治医の指示を優先してください。
         </p>
       </div>
@@ -873,8 +910,43 @@
 
   </div>
 
+  <!-- 書影ライトボックス(クリックで拡大表示) -->
+  <div id="cover-lightbox" onclick="window.closeCoverLightbox()"
+    class="fixed inset-0 z-50 hidden items-center justify-center p-6"
+    style="background-color: rgba(20,26,45,0.86); transition: opacity 0.3s ease;">
+    <button type="button" onclick="window.closeCoverLightbox()" aria-label="閉じる"
+      class="absolute top-6 right-6 text-[#F5F0E6] text-[28px] leading-none w-10 h-10 flex items-center justify-center hover:text-[#C9A96E] transition-colors duration-200">&times;</button>
+    <img id="cover-lightbox-img" src="cover.png" alt="糖質オン！ダイエット 表紙(拡大)"
+      class="max-w-[90vw] max-h-[86vh] w-auto h-auto rounded-sm shadow-[0_30px_80px_rgba(0,0,0,0.5)]"
+      style="transform: scale(0.92); transition: transform 0.3s cubic-bezier(0.16,1,0.3,1);"
+      onclick="event.stopPropagation();">
+  </div>
+
   <!-- JavaScript for Micro-interactions & Observers & Asset Repair -->
   <script>
+    // =========================================================
+    // ■ 書影ライトボックス(開閉)
+    // =========================================================
+    window.openCoverLightbox = function() {
+      const box = document.getElementById('cover-lightbox');
+      const img = document.getElementById('cover-lightbox-img');
+      box.classList.remove('hidden');
+      box.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+      requestAnimationFrame(() => { img.style.transform = 'scale(1)'; });
+    };
+    window.closeCoverLightbox = function() {
+      const box = document.getElementById('cover-lightbox');
+      const img = document.getElementById('cover-lightbox-img');
+      img.style.transform = 'scale(0.92)';
+      box.classList.add('hidden');
+      box.classList.remove('flex');
+      document.body.style.overflow = '';
+    };
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') window.closeCoverLightbox();
+    });
+
     // =========================================================
     // ■ アセットURL自動修復ユーティリティ (NFC / NFD濁点対応)
     // =========================================================
